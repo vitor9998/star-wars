@@ -12,30 +12,31 @@ class Filmes:
         resposta = requests.get(URL)
         lista_de_filmes = resposta.text
         joson_retorno = json.loads(lista_de_filmes)
+        result_json = joson_retorno['results'][0]
 
        
 
 
-        A=[]
+       # A=[]
         
-        for OBJETO in joson_retorno ['results']:
-            B={}
-            B['nome'] = OBJETO['name']
-            B['altura'] = OBJETO['height']
-            B['peso'] = OBJETO['mass']
-            B['cor_do_cabelo'] = OBJETO['hair_color']
-            B['cor_da_pele'] = OBJETO['skin_color']
-            B['cor_do_olho'] = OBJETO['eye_color']
-            B['data_nascimento'] = OBJETO['birth_year']
-            B['sexo'] = OBJETO['gender']
-            B['filmes'] = OBJETO['films']
-            B['veículo'] = OBJETO['species']
-            B['nave'] = OBJETO['starships']
-            B['criação'] = OBJETO['species']
-            B['editado'] = OBJETO['edited']
+        #for OBJETO in joson_retorno ['results']:
+            #B={}
+            #B['nome'] = OBJETO['name']
+            #B['altura'] = OBJETO['height']
+            #B['peso'] = OBJETO['mass']
+            #B['cor_do_cabelo'] = OBJETO['hair_color']
+            #B['cor_da_pele'] = OBJETO['skin_color']
+            #B['cor_do_olho'] = OBJETO['eye_color']
+            #B['data_nascimento'] = OBJETO['birth_year']
+            #B['sexo'] = OBJETO['gender']
+            #B['filmes'] = OBJETO['films']
+            #B['veículo'] = OBJETO['species']
+            #B['nave'] = OBJETO['starships']
+            #B['criação'] = OBJETO['species']
+            #B['editado'] = OBJETO['edited']
             
             
-            A.append(B)
+            #A.append(B)'''
             
 
-        return A
+        return result_json
