@@ -21,27 +21,27 @@ class Filmes:
             B['altura'] = result_json['height']
         if 'hair_color' in result_json and result_json['hair_color']:
             B['cor_do_cabelo'] = result_json['hair_color']
-        if 'skin_color' in joson_retorno and result_json['skin_color']:
+        if 'skin_color' in result_json and result_json['skin_color']:
             B['cor_da_pele'] = result_json ['skin_color']
-        if 'eye_color' in joson_retorno and result_json['eye_color']:
+        if 'eye_color' in result_json and result_json['eye_color']:
             B['cor_do_olho'] = result_json ['eye_color']
-        if 'birth_year' in joson_retorno and result_json['birth_year']:
+        if 'birth_year' in result_json and result_json['birth_year']:
             B['data_nascimento'] = result_json ['birth_year']
-        if 'gender' in joson_retorno and result_json['gender']:
+        if 'gender' in result_json and result_json['gender']:
             B['genêro'] = result_json ['gender']
-        if 'homeworld' in joson_retorno and result_json['homeworld']:
+        if 'homeworld' in result_json and result_json['homeworld']:
             B['mundo_natal'] = result_json ['homeworld']
-        if 'films' in joson_retorno and result_json['films']:
+        if 'films' in result_json and result_json['films']:
             B['filmes'] = result_json ['films']
-        if 'species' in joson_retorno and result_json['species']:
+        if 'species' in result_json and result_json['species']:
             B['espécies'] = result_json ['species']
-        if 'vehicles' in joson_retorno and result_json['vehicles']:
+        if 'vehicles' in result_json and result_json['vehicles']:
             B['veículos'] = result_json ['vehicles']
-        if 'starships' in joson_retorno and result_json['starships']:
+        if 'starships' in result_json and result_json['starships']:
             B['nave'] = result_json ['starships']
-        if 'created' in joson_retorno and result_json['created']:
+        if 'created' in result_json and result_json['created']:
             B['criação'] = result_json ['created']
-        if 'edited' in joson_retorno and result_json['edited']:
+        if 'edited' in result_json and result_json['edited']:
             B['editado'] = result_json ['edited']
         
 
