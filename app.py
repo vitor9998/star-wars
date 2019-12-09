@@ -1,5 +1,5 @@
 from flask import Flask
-from api import Lista
+from api import Lista, Filmes
 
 
 app = Flask(__name__)

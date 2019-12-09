@@ -1,5 +1,5 @@
 from flask import Blueprint, Response, request, jsonify
-from service import Filmes
+from .service import Filmes
 import requests
 import json
 
@@ -11,7 +11,7 @@ Lista = Blueprint(
 @Lista.route("/pessoa/<nome>", methods=["GET"])
 def Personagem(nome):
     a = Filmes.filtro(nome)
-    b = json.dumps(a)   
+    b = json.dumps(a)    
 
     return b  
     
