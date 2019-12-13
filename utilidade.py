@@ -59,6 +59,8 @@ def tipo_terreno(text):
         text = 'lagos'
     elif text == 'rivers':
         text = 'rios'
+    elif text == "grassy hills, swamps, forests, mountains":
+        text = 'colinas, pântanos, florestas, montanhas'
     else:
         text = text
     return text

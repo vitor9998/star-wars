@@ -30,7 +30,7 @@ class Filmes:
             B['cor_do_cabelo'] = cor_do_cabelo(result_json['hair_color'])
 
         if 'skin_color' in result_json and result_json['skin_color']:
-            _corzinha = re.split(',', cor_da_pele(result_json['skin_color']))
+            _corzinha = re.split(', ', cor_da_pele(result_json['skin_color']))
             B['cor_da_pele'] = _corzinha
         
 
@@ -55,7 +55,8 @@ class Filmes:
             resposta_mundo_natal = requests.get(result_json['homeworld'])
             mundo_json = json.loads(resposta_mundo_natal.text)
             _mundo_natal['Nome'] = mundo_json['name']
-            _mundo_natal['Terreno'] = tipo_terreno(mundo_json['terrain'])
+            _mundo_natal['terreno'] = re.split(', ', tipo_terreno(mundo_json['terrain']))
+           
             B['Mundo_Natal'] = _mundo_natal
 
 
