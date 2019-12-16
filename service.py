@@ -7,6 +7,7 @@ from .utilidade import cor_da_pele
 from .utilidade import tipo_terreno
 from .utilidade import cor_do_cabelo
 import re
+from operator import itemgetter
 class Filmes:
     def filtro(nome):
         nome = str(nome.replace(" ", "-"))
@@ -34,12 +35,6 @@ class Filmes:
             B['cor_da_pele'] = _corzinha
         
 
-
-
-           
-            
-        
-            
         if 'eye_color' in result_json and result_json['eye_color']:
             B['cor_do_olho'] = cor_do_olho(result_json['eye_color'])
 
@@ -68,8 +63,11 @@ class Filmes:
                 film_json = json.loads(resposta_filmes.text)
                 C['Título'] = film_json['title']
                 C['Episódio'] = film_json['episode_id']
+                
                 films.append(C)
-            B['Filmes'] = films
+                ep = sorted(films, key = lambda t: t['Episódio'])   
+            B['Filmes'] = ep
+
         
 
 
@@ -85,7 +83,7 @@ class Filmes:
                 D['Língua'] = especie_json['language']
                 especie.append(D)
                 
-            B['espécies'] = especie
+            B['espécies'] = especie 
 
 
 

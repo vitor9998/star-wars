@@ -52,7 +52,7 @@ def tipo_terreno(text):
     if text == 'desert':
         text = 'deserto'
     elif text == 'jungle':
-        text = 'selva'
+        text = 'selva'  
     elif text == 'forests':
         text = 'florestas'
     elif text == 'lakes':
