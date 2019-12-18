@@ -7,7 +7,7 @@ from .utilidade import cor_da_pele
 from .utilidade import tipo_terreno
 from .utilidade import cor_do_cabelo
 import re
-from operator import itemgetter
+
 class Filmes:
     def filtro(nome):
         nome = str(nome.replace(" ", "-"))
