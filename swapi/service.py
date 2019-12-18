@@ -7,6 +7,8 @@ from .utilidade import cor_da_pele
 from .utilidade import tipo_terreno
 from .utilidade import cor_do_cabelo
 import re
+import pytest
+
 
 class Filmes:
     def filtro(nome):
@@ -34,7 +36,6 @@ class Filmes:
             _corzinha = re.split(', ', cor_da_pele(result_json['skin_color']))
             B['cor_da_pele'] = _corzinha
         
-
         if 'eye_color' in result_json and result_json['eye_color']:
             B['cor_do_olho'] = cor_do_olho(result_json['eye_color'])
 
@@ -69,9 +70,6 @@ class Filmes:
             B['Filmes'] = ep
 
         
-
-
-
         if 'species' in result_json and result_json['species']:
             especie = []
             for OBJETO2 in result_json['species']:
@@ -85,8 +83,6 @@ class Filmes:
                 
             B['espécies'] = especie 
 
-
-
         if 'vehicles' in result_json and result_json['vehicles']:
             veiculo = []
             for OBJETO3 in result_json['vehicles']:
@@ -96,8 +92,6 @@ class Filmes:
                 E['Nome'] = veiculo_json['name']
                 E['Modelo'] = veiculo_json['model']
                 veiculo.append(E)
-
-
             B['veículos'] = veiculo
 
 
@@ -110,11 +104,7 @@ class Filmes:
                 F['Nome'] = nave_json['name']
                 F['Modelo'] = nave_json['model']
                 F['Passageiros'] = nave_json['passengers']
-
                 nave.append(F)
-
-
-
             B['nave'] = nave
 
 
