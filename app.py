@@ -1,9 +1,11 @@
 from flask import Flask
-from api import Lista, Filmes
+from swapi import Lista, Filmes
+
 
 
 app = Flask(__name__)
 app.register_blueprint(Lista)
+
 
 try:
     app.run(debug=True)
