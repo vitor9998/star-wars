@@ -1,6 +1,6 @@
 # STAR WARS API
 
-https://swapi.co/
+https://swapi.dev/
 
 #instalar dependencias do projeto
 pip install -r requirements.txt
