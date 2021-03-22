@@ -14,7 +14,7 @@ class Filmes:
     def filtro(nome):
         nome = str(nome.replace(" ", "-"))
 
-        base_url = 'https://swapi.co/api/people/?search='
+        base_url = 'https://swapi.dev/api/people/?search='
         URL = (base_url + nome)
         
         resposta = requests.get(URL)
